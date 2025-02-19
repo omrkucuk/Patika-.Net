@@ -1,0 +1,35 @@
+@startuml University
+
+class University {
+}
+
+class Department {
+}
+
+class Office {
+}
+
+class Classroom {
+}
+
+class Employee {
+}
+
+class Professor {
+}
+
+class Staff {
+}
+
+University "1" *-- "many" Department : contains
+University "1" *-- "many" Classroom : contains
+University "1" *-- "many" Office : contains
+
+Department "1" *-- "many" Office : contains
+
+Employee "1" -- "1" Office : works in
+
+Employee <|-- Professor
+Employee <|-- Staff
+
+@enduml
